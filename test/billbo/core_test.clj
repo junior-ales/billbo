@@ -1,6 +1,6 @@
-(ns frodo-test.core-test
+(ns billbo.core-test
   (:require [clojure.test :refer :all]
-            [frodo-test.core :refer :all]))
+            [billbo.core :refer :all]))
 
 (deftest a-test
   (testing "FIXME, I fail."

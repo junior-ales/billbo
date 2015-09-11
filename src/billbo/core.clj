@@ -1,4 +1,4 @@
-(ns frodo-test.core
+(ns billbo.core
 
 (:require [compojure.core :refer [defroutes ANY]]
           [ring.adapter.jetty :as jetty]
