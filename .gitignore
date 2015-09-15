@@ -5,7 +5,7 @@ target/
 *.swp
 .DS_Store
 
-.idea/
+.idea/*
 .lein-repl-history
 .lein-failures
 billbo.iml
