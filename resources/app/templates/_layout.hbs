@@ -3,8 +3,15 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Billbo</title>
+    <title>Billbo - {{title}}</title>
     <link rel="stylesheet" href="styles/libs.css" />
     <script src="scripts/libs-header.js"></script>
   </head>
   <body>
+
+    {{> @partial-block }}
+
+    <script src="scripts/libs.js"></script>
+    <script>$(document).foundation();</script>
+  </body>
+</html>
