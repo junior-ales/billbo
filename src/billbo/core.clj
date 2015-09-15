@@ -13,6 +13,7 @@
     (routes
       (ANY "/" [] (io/resource "public/index.html"))
       (ANY "/bills" [] bills-resource)
+      (route/resources "/")
       (route/not-found {:resource "" :body "Not found"}))))
 
 (def handler
