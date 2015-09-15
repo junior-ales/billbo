@@ -1,27 +1,32 @@
 (ns billbo.core
+  (:require [compojure.core :refer [defroutes ANY routes]]
+            [compojure.handler :refer [api]]
+            [compojure.route :as route]
+            [ring.adapter.jetty :as jetty]
+            [liberator.core :refer [defresource request-method-in]]
+            [clojure.java.io :as io]
+            [ring.middleware.multipart-params :refer [wrap-multipart-params]]
+            [billbo.bills :refer [bills-resource]]))
 
-(:require [compojure.core :refer [defroutes ANY]]
-          [compojure.route :refer [resources]]
-          [ring.adapter.jetty :as jetty]
-          [liberator.core :refer [defresource request-method-in]]
-          [clojure.java.io :as io]
-          [clojure.data.json :as json]))
+(defn main-routes []
+  (->
+    (routes
+      (ANY "/" [] (io/resource "public/index.html"))
+      (ANY "/bills" [] bills-resource)
+      (route/not-found {:resource "" :body "Not found"}))))
 
-(def conteudo (atom "bla"))
+(def handler
+  (-> (main-routes)
+      api
+      wrap-multipart-params))
 
-(defresource handlejson
-  :allowed-methods [:post :get]
-  :available-media-types ["application/json"]
-  :available-charsets ["utf-8"]
-  :post! (fn[ctx] (swap! conteudo (fn[_] (json/read (io/reader (get-in ctx [:request :body]))))))
-  :handle-ok (fn[_] @conteudo)
-  :handle-created (fn[_] (str "Created " @conteudo)))
-
-(defroutes main-routes
-  (ANY "/" [] (io/resource "public/index.html"))
-  (ANY "/jose" [] handlejson)
-  (resources "/"))
+(defn start [options]
+  (jetty/run-jetty #'handler (assoc options :join? false)))
 
 ;; Server
-(defn -main []
-  (jetty/run-jetty main-routes {:port 3000}))
+(defn -main
+  ([port]
+   (start {:port (Integer/parseInt port)}))
+  ([]
+   (-main "3000")))
+

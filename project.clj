@@ -7,5 +7,6 @@
                  [org.clojure/clojure "1.6.0"]
                  [compojure "1.0.2"]
                  [ring/ring-jetty-adapter "1.1.0"]
-                 [liberator "0.9.0"]]
+                 [liberator "0.9.0"]
+                 [ring/ring-mock "0.3.0"]]
   :main billbo.core)
