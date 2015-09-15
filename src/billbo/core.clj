@@ -17,17 +17,16 @@
       (route/not-found {:resource "" :body "Not found"}))))
 
 (def handler
-  (-> (main-routes)
-      api
-      wrap-multipart-params))
+  (->
+    (main-routes)
+    api
+    wrap-multipart-params))
 
 (defn start [options]
   (jetty/run-jetty #'handler (assoc options :join? false)))
 
 ;; Server
 (defn -main
-  ([port]
-   (start {:port (Integer/parseInt port)}))
-  ([]
-   (-main "3000")))
+  ([port] (start {:port (Integer/parseInt port)}))
+  ([] (-main "3000")))
 
