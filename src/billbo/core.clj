@@ -1,6 +1,7 @@
 (ns billbo.core
 
 (:require [compojure.core :refer [defroutes ANY]]
+          [compojure.route :refer [resources]]
           [ring.adapter.jetty :as jetty]
           [liberator.core :refer [defresource request-method-in]]
           [clojure.java.io :as io]
@@ -18,7 +19,8 @@
 
 (defroutes main-routes
   (ANY "/" [] (io/resource "public/index.html"))
-  (ANY "/jose" [] handlejson))
+  (ANY "/jose" [] handlejson)
+  (resources "/"))
 
 ;; Server
 (defn -main []
