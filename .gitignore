@@ -6,3 +6,6 @@ target/
 .DS_Store
 
 .idea/
+.lein-repl-history
+.lein-failures
+billbo.iml
