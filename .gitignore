@@ -9,3 +9,6 @@ target/
 .lein-repl-history
 .lein-failures
 billbo.iml
+.idea/libraries/Leiningen__ring_ring_codec_1_0_0.xml
+.idea/libraries/Leiningen__ring_ring_mock_0_3_0.xml
+.idea/uiDesigner.xml
