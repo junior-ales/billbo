@@ -15,12 +15,25 @@
 (defn json-response [response]
   (clojure.data.json/read-str (:body response)))
 
-(def a-very-simple-bill {:id "OK"})
+(def a-new-bill-request {:issued-by    "CEEE"
+                         :total-amount 78.45
+                         :due-date     "2015-10-15"
+                         :picture      "picture-in-base64"})
+
+(def a-new-bill-response {"bill-id"      "201510151845097800001"
+                          "issued-by"    "CEEE"
+                          "total-amount" 78.45
+                          "due-date"     "2015-10-15"
+                          "picture-link" "/bills/201510151845097800001/picture"})
+
 
 (deftest bills-tests
   (testing "Creating a new bill"
-    (is (= (json-response (handler (build-post "/bills" a-very-simple-bill)))
-           {"id" "OK"}))))
+    (with-redefs-fn {#'gen-bill-id (fn [] "201510151845097800001")}
+      #(is (= (json-response (handler (build-post "/bills" a-new-bill-request)))
+              a-new-bill-response)))))
+
+
 
 
 
