@@ -6,7 +6,8 @@
             [liberator.core :refer [defresource request-method-in]]
             [clojure.java.io :as io]
             [ring.middleware.multipart-params :refer [wrap-multipart-params]]
-            [billbo.bills :refer [bills-resource]]))
+            [billbo.bills :refer [bills-resource]]
+            [db.migrations :refer [migrate]]))
 
 (defn main-routes []
   (->
@@ -27,6 +28,9 @@
 
 ;; Server
 (defn -main
-  ([port] (start {:port (Integer/parseInt port)}))
-  ([] (-main "3000")))
+  ([mig command] (migrate command))
+  ([] (-main "3000"))
+  ([port]
+   (migrate "up")
+   (start {:port (Integer/parseInt port)})))
 
