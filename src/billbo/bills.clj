@@ -1,7 +1,9 @@
 (ns billbo.bills
   (:require [liberator.core :refer [defresource request-method-in]]
             [billbo.request-handler :refer [read-body]]
-            [db.db-core :refer [create-bill! db-spec]]))
+            [db.db-core :refer [create-bill! db-spec]]
+            [clj-time.format :as fmt]
+            [clj-time.core :as tim]))
 
 ;;changing this to get utc date soon...
 (defn now [] (new java.util.Date))
@@ -18,16 +20,18 @@
       (create-bill! db-spec bill-id issued-by total-amount due-date current-status picture created_by last_updated_by)
       (catch Exception e (throw (.getNextException e))))))
 
-(defn gen-bill-id [] "")
+(defn gen-bill-id []
+  (str (fmt/unparse (fmt/formatter "yyyyMMddHHmmssSSS") (tim/now))
+       (format "%04d" (rand-int 9999))))
 
 (defn create-bill [bill-request]
   (let [bill-id (gen-bill-id)
         {:strs [issued-by total-amount due-date]} bill-request]
-    {:bill-id      bill-id
-     :picture-link (str "/bills/" bill-id "/picture")
-     :issued-by    issued-by
-     :total-amount total-amount
-     :due-date     due-date
+    {:bill-id        bill-id
+     :picture-link   (str "/bills/" bill-id "/picture")
+     :issued-by      issued-by
+     :total-amount   total-amount
+     :due-date       due-date
      :current-status "open"}))
 
 (defresource bills-resource

@@ -11,5 +11,7 @@
                  [ring/ring-mock "0.3.0"]
                  [migratus "0.8.4"]
                  [org.postgresql/postgresql "9.4-1201-jdbc41"]
-                 [yesql "0.4.2"]]
+                 [yesql "0.4.2"]
+                 [clj-time "0.11.0"]]
+
   :main billbo.core)
