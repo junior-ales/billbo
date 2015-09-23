@@ -9,7 +9,7 @@
                  [ring/ring-jetty-adapter "1.1.0"]
                  [liberator "0.9.0"]
                  [ring/ring-mock "0.3.0"]
-                 [org.clojure/java.jdbc "0.4.1"]
                  [migratus "0.8.4"]
-                 [org.postgresql/postgresql "9.4-1201-jdbc41"]]
+                 [org.postgresql/postgresql "9.4-1201-jdbc41"]
+                 [yesql "0.4.2"]]
   :main billbo.core)

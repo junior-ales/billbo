@@ -3,7 +3,15 @@
             [billbo.bills :refer :all]
             [billbo.core :refer [handler]]
             [ring.mock.request :as mock]
-            [billbo.request-handler :refer [read-body]]))
+            [billbo.request-handler :refer [read-body]]
+            [db.db-core :refer [delete-all! db-spec]]
+            [db.migrations :refer [migrate]]))
+
+(defn delete-bills-table []
+  (migrate "up")
+  (delete-all! db-spec))
+
+(use-fixtures :each (fn [f] (delete-bills-table) (f)))
 
 (defn build-post [url payload]
   (->
@@ -24,7 +32,8 @@
                           "issued-by"    "CEEE"
                           "total-amount" 78.45
                           "due-date"     "2015-10-15"
-                          "picture-link" "/bills/201510151845097800001/picture"})
+                          "picture-link" "/bills/201510151845097800001/picture"
+                          "current-status" "open"})
 
 
 (deftest bills-tests

@@ -1,17 +1,10 @@
 (ns db.migrations
-  (:require [migratus.core :as migratus])
-  (:import java.sql.Connection))
+  (:require [migratus.core :as migratus]
+            [billbo.env :refer [read-env]]))
 
-(def billbo-database-url (System/getenv "BILLBO_DATABASE_URL"))
-(def billbo-database-admin-user (System/getenv "BILLBO_DATABASE_ADMIN_USER"))
-(def billbo-database-admin-password (System/getenv "BILLBO_DATABASE_ADMIN_PASSWORD"))
-(def billbo-database-app-user (System/getenv "BILLBO_DATABASE_APP_USER"))
-(def billbo-database-app-password (System/getenv "BILLBO_DATABASE_APP_PASSWORD"))
-
-(def billbo-database-url "jdbc:postgresql://localhost:5432/billbo")
-(def billbo-database-admin-user "billbo_admin")
-(def billbo-database-admin-password "billbo_admin")
-
+(def billbo-database-url (read-env "BILLBO_DATABASE_URL"))
+(def billbo-database-admin-user (read-env "BILLBO_DATABASE_ADMIN_USER"))
+(def billbo-database-admin-password (read-env "BILLBO_DATABASE_ADMIN_PASSWORD"))
 
 (def db-config {:store         :database
                 :migration-dir "migrations"
