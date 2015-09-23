@@ -1,3 +1,4 @@
+[![Build Status](https://snap-ci.com/junior-ales/billbo/branch/master/build_image)](https://snap-ci.com/junior-ales/billbo/branch/master)
 # Billbo
 
 A Clojure library designed to ... well, that part is up to you.
