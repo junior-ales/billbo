@@ -1,0 +1,38 @@
+DROP SCHEMA IF EXISTS billbo;
+DROP USER IF EXISTS billbo_app;
+DROP USER IF EXISTS billbo_admin;
+DROP TABLESPACE IF EXISTS billbo;
+DROP DATABASE IF EXISTS billbo;
+
+CREATE TABLESPACE billbo LOCATION '/tmp/billbo';
+
+CREATE DATABASE billbo WITH tablespace billbo;
+
+CREATE USER billbo_app WITH PASSWORD 'billbo_app';
+
+CREATE SCHEMA billbo;
+
+ALTER DATABASE billbo SET search_path='billbo';
+
+CREATE USER billbo_admin;
+
+ALTER SCHEMA billbo OWNER TO billbo_admin;
+
+SET search_path = billbo, pg_catalog;
+
+REVOKE ALL ON SCHEMA billbo FROM PUBLIC;
+REVOKE ALL ON SCHEMA billbo FROM billbo_app;
+GRANT ALL ON SCHEMA billbo TO billbo_admin;
+GRANT ALL ON SCHEMA billbo TO billbo_app;
+
+REVOKE ALL ON SCHEMA public FROM PUBLIC;
+GRANT ALL PRIVILEGES ON ALL TABLES IN SCHEMA billbo TO billbo_app;
+GRANT ALL PRIVILEGES ON ALL SEQUENCES IN SCHEMA billbo TO billbo_app;
+
+ALTER DEFAULT PRIVILEGES IN SCHEMA billbo REVOKE ALL ON TABLES  FROM PUBLIC;
+ALTER DEFAULT PRIVILEGES IN SCHEMA billbo GRANT SELECT,INSERT,DELETE,UPDATE ON TABLES  TO billbo_admin;
+ALTER DEFAULT PRIVILEGES IN SCHEMA billbo GRANT SELECT,INSERT,DELETE,UPDATE ON TABLES  TO billbo_app;
+
+SET search_path = billbo;
+
+SET default_tablespace = billbo;
