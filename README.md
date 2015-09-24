@@ -4,7 +4,16 @@ A Clojure library designed to ... well, that part is up to you.
 
 ## Usage
 
-FIXME
+You will need:
+- Java 8
+- Postgresql Server
+- Lein 2
+
+How to run:
+
+- Clone the repo
+- Run the export_variables.sh with the relevant values to your setup
+- lein run
 
 ## License
 
