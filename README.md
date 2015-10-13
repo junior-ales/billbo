@@ -10,10 +10,17 @@ You will need:
 - Postgresql Server
 - Lein 2
 
+How to configure the DB for mac:
+
+- Install postgres: brew install postgres
+- Create this directory: mkdir /tmp/billbo
+- Initialize the db: psql -d billbo -a -f resources/init_db.sql
+The migrations run automatically when you start the app.
+
 How to run:
 
 - Clone the repo
-- Run the export_variables.sh with the relevant values to your setup
+- Source export_variables.sh: src resources/export_variables.sh
 - lein run
 
 ## Frontend Development
