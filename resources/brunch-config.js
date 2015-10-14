@@ -9,6 +9,8 @@ module.exports = {
         },
         order: {
           before: [
+            'vendor/scripts/react.js',
+            'vendor/scripts/react-dom.js',
             'vendor/scripts/jquery.js',
             'vendor/scripts/fastclick.js'
           ]

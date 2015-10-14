@@ -37,54 +37,14 @@
       <header class="small-12 columns">
         <h2>Nossas Contas</h2>
       </header>
-      <div class="small-12 columns">
-        <ul class="small-block-grid-2 medium-block-grid-3">
-          <li>
-            <a class="th" href="#">
-              <img src="http://placehold.it/300x400?text=Conta+1" alt="Conta 1" />
-            </a>
-          </li>
-          <li>
-            <a class="th" href="#">
-              <img src="http://placehold.it/300x400?text=Conta+2" alt="Conta 2" />
-            </a>
-          </li>
-          <li>
-            <a class="th" href="#">
-              <img src="http://placehold.it/300x400?text=Conta+3" alt="Conta 3" />
-            </a>
-          </li>
-          <li>
-            <a class="th" href="#">
-              <img src="http://placehold.it/300x400?text=Conta+4" alt="Conta 4" />
-            </a>
-          </li>
-          <li>
-            <a class="th" href="#">
-              <img src="http://placehold.it/300x400?text=Conta+5" alt="Conta 5" />
-            </a>
-          </li>
-          <li>
-            <a class="th" href="#">
-              <img src="http://placehold.it/300x400?text=Conta+6" alt="Conta 6" />
-            </a>
-          </li>
-          <li>
-            <a class="th" href="#">
-              <img src="http://placehold.it/300x400?text=Conta+7" alt="Conta 7" />
-            </a>
-          </li>
-          <li>
-            <a class="th" href="#">
-              <img src="http://placehold.it/300x400?text=Conta+8" alt="Conta 8" />
-            </a>
-          </li>
-        </ul>
-      </div>
+
+      <div id="bill-list" class="small-12 columns"></div>
     </section>
     
 
     <script src="scripts/libs.js"></script>
+    <script src="scripts/app.js"></script>
     <script>$(document).foundation();</script>
+    <script>require("views/home").init();</script>
   </body>
 </html>
