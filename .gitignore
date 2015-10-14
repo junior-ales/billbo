@@ -4,6 +4,7 @@ target/
 *.jar
 *.swp
 .DS_Store
+*.log
 
 .idea/*
 .lein-repl-history
