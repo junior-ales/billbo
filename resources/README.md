@@ -1,6 +1,6 @@
 # Billbo Front End
 
-It's built with [Brunch](http://brunch.io), using [Foundation 5](http://foundation.zurb.com) and [Handlebars](http://handlebarsjs.com).
+It's built with [Brunch](http://brunch.io), using [Foundation 5](http://foundation.zurb.com), [ReactJs](https://facebook.github.io/react) and [Handlebars](http://handlebarsjs.com).
 
 -----------------------------------------------------------------
 
