@@ -12,7 +12,11 @@
                  [migratus "0.8.4"]
                  [org.postgresql/postgresql "9.4-1201-jdbc41"]
                  [yesql "0.4.2"]
-                 [clj-time "0.11.0"]]
+                 [clj-time "0.11.0"]  
+                 [clj-time "0.11.0"]
+                 [environ "1.0.1"]]
+
   :plugins [[lein-ring "0.9.7"]]
   :ring {:handler billbo.core/handler}
+
   :main billbo.core)
