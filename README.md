@@ -15,6 +15,7 @@ How to configure the DB for mac:
 - Install postgres: brew install postgres
 - Create this directory: mkdir /tmp/billbo
 - Initialize the db: psql -d billbo -a -f resources/init_db.sql
+- Copy the db-env config into the root: cp resources/.db-env .lein-env
 The migrations run automatically when you start the app.
 
 How to run:
