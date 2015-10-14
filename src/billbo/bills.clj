@@ -27,7 +27,7 @@
       (catch Exception e (throw (.getNextException e))))))
 
 (defn list-all-bills []
-  (seq (list-bills db-spec)))
+  (list-bills db-spec))
 
 (defn gen-bill-id []
   (str (fmt/unparse (fmt/formatter "yyyyMMddHHmmssSSS") (tim/now))
