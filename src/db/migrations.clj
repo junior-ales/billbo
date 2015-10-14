@@ -1,10 +1,10 @@
 (ns db.migrations
   (:require [migratus.core :as migratus]
-            [billbo.env :refer [read-env]]))
+            [environ.core :refer [env]]))
 
-(def billbo-database-url (read-env "BILLBO_DATABASE_URL"))
-(def billbo-database-admin-user (read-env "BILLBO_DATABASE_ADMIN_USER"))
-(def billbo-database-admin-password (read-env "BILLBO_DATABASE_ADMIN_PASSWORD"))
+(def billbo-database-url (env :billbo-database-url))
+(def billbo-database-admin-user (env :billbo-database-admin-user))
+(def billbo-database-admin-password (env :billbo-database-admin-password))
 
 (def db-config {:store         :database
                 :migration-dir "migrations"

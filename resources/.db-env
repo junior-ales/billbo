@@ -1,0 +1,8 @@
+{
+	:billbo-database-url	"jdbc:postgresql://localhost:5432/billbo"
+	:billbo-database-admin-user		"billbo_admin"
+	:billbo-database-admin-password		"billbo_admin"
+	:billbo-database-app-user	"billbo_app"
+	:billbo-database-app-password	"billbo_app"
+}
+
