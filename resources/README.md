@@ -1,11 +1,12 @@
 # Billbo Front End
 
-It's built with [Brunch](http://brunch.io), using [Foundation 5](http://foundation.zurb.com), [ReactJs](https://facebook.github.io/react) and [Handlebars](http://handlebarsjs.com).
+It's built with [Brunch](http://brunch.io), using [Foundation 5](http://foundation.zurb.com), [ReactJS](https://facebook.github.io/react) and [Handlebars](http://handlebarsjs.com).
 
 -----------------------------------------------------------------
 
 ### Development
 
+* Tested and developed with [nodejs](https://nodejs.org) v4.0.0 and npm 2.14.2
 * Install brunch with `npm install -g brunch`;
 * Install dependencies with `npm install`;
 
