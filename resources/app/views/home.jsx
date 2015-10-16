@@ -1,6 +1,6 @@
 "use strict";
 
-var BillList = require('components/billList');
+var BillList = require('./components/billList');
 
 var App = {
   init: function() {
