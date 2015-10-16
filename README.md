@@ -1,17 +1,18 @@
 [![Build Status](https://snap-ci.com/junior-ales/billbo/branch/master/build_image)](https://snap-ci.com/junior-ales/billbo/branch/master)
 
 # Billbo
-
+________________________________________________________________________
 Help an institution to help people
 
 ## Usage
 
-You will need:
-- [Java 8](http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html)
+### You will need:
+
+- [Java 8](http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html);
 - [Postgresql Server](http://www.postgresql.org/download);
 - [Lein 2](http://leiningen.org);
 
-How to configure the DB for *mac*:
+### How to configure the DB for *mac*:
 
 - Install postgres: `brew install postgres`
 - Create this directory: `mkdir /tmp/billbo`
@@ -20,7 +21,7 @@ How to configure the DB for *mac*:
 
 The migrations run automatically when you start the app.
 
-How to run:
+### How to run:
 
 - Clone the repo;
 - `lein run`
