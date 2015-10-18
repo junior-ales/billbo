@@ -25,7 +25,7 @@ var ReserveConfirmation = React.createClass({
 
     return(
       <article className="reserve-confirmation">
-        <button onClick={this.handleDonateClick}>Donate</button>
+        <button onClick={this.handleDonateClick}>Doar</button>
         <div className={modalClass}>
           <div className="reserve-confirmation__modal__content">
             <h2>Doar</h2>
