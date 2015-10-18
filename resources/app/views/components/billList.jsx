@@ -71,9 +71,13 @@ var BillList = React.createClass({
   },
 
   render: function() {
+    var onlyOpenBills = function(bill) {
+      return bill["current-status"] === "open";
+    };
+
     return(
       <ul className="small-block-grid-2 medium-block-grid-3">
-        {this.state.bills.map(function(bill) {
+        {this.state.bills.filter(onlyOpenBills).map(function(bill) {
           return <li key={"billId"+bill["bill-id"]}><Bill data={bill} /></li>;
         })}
       </ul>
