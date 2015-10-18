@@ -4,7 +4,7 @@
     "issued-by":    "NET",
     "total-amount": 78.45,
     "due-date":     "2015-10-15",
-    "picture-link": "/mock/bill-picture.jpg",
+    "picture-link": "/images/bill-picture.jpg",
     "current-status": "open"
   },
   {
@@ -12,7 +12,7 @@
     "issued-by":    "NET",
     "total-amount": 78.45,
     "due-date":     "2015-10-15",
-    "picture-link": "/mock/bill-picture.jpg",
+    "picture-link": "/images/bill-picture.jpg",
     "current-status": "open"
   },
   {
@@ -20,7 +20,7 @@
     "issued-by":    "NET",
     "total-amount": 78.45,
     "due-date":     "2015-10-15",
-    "picture-link": "/mock/bill-picture.jpg",
+    "picture-link": "/images/bill-picture.jpg",
     "current-status": "paid"
   },
   {
@@ -28,7 +28,7 @@
     "issued-by":    "NET",
     "total-amount": 78.45,
     "due-date":     "2015-10-15",
-    "picture-link": "/mock/bill-picture.jpg",
+    "picture-link": "/images/bill-picture.jpg",
     "current-status": "reserved"
   },
   {
@@ -36,7 +36,7 @@
     "issued-by":    "NET",
     "total-amount": 78.45,
     "due-date":     "2015-10-15",
-    "picture-link": "/mock/bill-picture.jpg",
+    "picture-link": "/images/bill-picture.jpg",
     "current-status": "open"
   },
   {
@@ -44,7 +44,7 @@
     "issued-by":    "NET",
     "total-amount": 78.45,
     "due-date":     "2015-10-15",
-    "picture-link": "/mock/bill-picture.jpg",
+    "picture-link": "/images/bill-picture.jpg",
     "current-status": "reserved"
   },
   {
@@ -52,7 +52,7 @@
     "issued-by":    "NET",
     "total-amount": 78.45,
     "due-date":     "2015-10-15",
-    "picture-link": "/mock/bill-picture.jpg",
+    "picture-link": "/images/bill-picture.jpg",
     "current-status": "open"
   }
 ]

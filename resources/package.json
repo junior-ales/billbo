@@ -21,5 +21,10 @@
     "sass-brunch": "^1.9.1",
     "static-site-brunch": "^0.1.2",
     "uglify-js-brunch": ">= 1.0 < 1.9"
+  },
+  "devDependencies": {
+    "body-parser": "^1.14.1",
+    "express": "^4.13.3",
+    "morgan": "^1.6.1"
   }
 }

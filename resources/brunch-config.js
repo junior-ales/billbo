@@ -29,6 +29,7 @@ module.exports = {
       templates: {
         joinTo: 'scripts/app.js'
       }
-    }
+    },
+    server: { run: "yes" }
   }
 };
