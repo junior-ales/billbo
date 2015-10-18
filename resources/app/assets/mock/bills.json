@@ -1,0 +1,34 @@
+[
+  {
+    "bill-id":      "201510151845097800001",
+    "issued-by":    "NET",
+    "total-amount": 78.45,
+    "due-date":     "2015-10-15",
+    "picture-link": "/mock/bill-picture.jpg",
+    "current-status": "open"
+  },
+  {
+    "bill-id":      "17042711108002283842",
+    "issued-by":    "NET",
+    "total-amount": 78.45,
+    "due-date":     "2015-10-15",
+    "picture-link": "/mock/bill-picture.jpg",
+    "current-status": "open"
+  },
+  {
+    "bill-id":      "17042711108002283843",
+    "issued-by":    "NET",
+    "total-amount": 78.45,
+    "due-date":     "2015-10-15",
+    "picture-link": "/mock/bill-picture.jpg",
+    "current-status": "open"
+  },
+  {
+    "bill-id":      "17042711108002283844",
+    "issued-by":    "NET",
+    "total-amount": 78.45,
+    "due-date":     "2015-10-15",
+    "picture-link": "/mock/bill-picture.jpg",
+    "current-status": "open"
+  }
+]
