@@ -1,3 +1,4 @@
+[![Stories in Ready](https://badge.waffle.io/junior-ales/billbo.svg?label=ready&title=Ready)](http://waffle.io/junior-ales/billbo)
 [![Build Status](https://snap-ci.com/junior-ales/billbo/branch/master/build_image)](https://snap-ci.com/junior-ales/billbo/branch/master)
 
 # Billbo
