@@ -1,6 +1,7 @@
 "use strict";
 
 var Bill = require('./bill');
+var request = require('model/request');
 
 var BillList = React.createClass({
   getInitialState: function() {
@@ -9,14 +10,14 @@ var BillList = React.createClass({
 
   componentDidMount: function() {
     var self = this;
-    var request = new XMLHttpRequest();
-    request.open('GET', encodeURI(self.props.source));
-    request.onload = function() {
-      if (self.isMounted()) {
-         self.setState({ bills: JSON.parse(request.responseText)});
+
+    request.get(self.props.source, {
+      success: function(responseText) {
+        if (self.isMounted()) {
+           self.setState({ bills: JSON.parse(responseText) });
+        }
       }
-    };
-    request.send();
+    });
   },
 
   render: function() {

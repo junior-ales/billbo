@@ -13,7 +13,13 @@ module.exports = function startServer(port, path, callback) {
 
   app.use(express.static(Path.join(__dirname, path)));
   app.use(logger('dev'));
+  app.use(bodyParser.json());
   app.use(bodyParser.urlencoded({ extended: true }));
+
+  app.post('/reservation/new', function(req, res) {
+    console.log(req.body);
+    res.status(201).end('Created');
+  });
 
   app.get('/bills', function(req, res) {
     res.json(bills);

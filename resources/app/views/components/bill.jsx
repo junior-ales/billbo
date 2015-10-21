@@ -11,7 +11,7 @@ var Bill = React.createClass({
         <h2>{this.props.data["issued-by"]}</h2>
         <p>R$ {this.props.data["total-amount"]}</p>
         <p>Vencimento: {this.props.data["due-date"]}</p>
-        {featureToggle.donateButton ? <ReserveConfirmation /> : null}
+        {featureToggle.donateButton ? <ReserveConfirmation billId={this.props.data["bill-id"]} /> : null}
       </div>
     );
   }

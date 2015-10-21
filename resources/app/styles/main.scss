@@ -13,10 +13,10 @@
   position: fixed;
   top: 50%;
   left: 50%;
-  width: 450px;
+  min-width: 450px;
   transform: translate(-50%, -50%);
   background-color: white;
-  padding: 2em;
+  padding: 1.25em 2em;
   z-index: 10;
 
   button {
